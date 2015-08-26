@@ -1,0 +1,1 @@
+<br>{_LABEL_DESCUENTO} {DESCUENTO}&nbsp;%

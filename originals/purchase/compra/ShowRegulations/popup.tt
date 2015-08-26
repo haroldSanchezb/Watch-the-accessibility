@@ -1,0 +1,22 @@
+<div id="containerRegulation">
+	<div class="header1">
+		<span class="containerText1">
+			[% loc('POPUP_CONDICIONES_TITULO') %]
+		</span>
+	</div>
+	<div id="inside">
+
+		[% CHANGES_BLOCK %]
+
+		[% REFUNDS_BLOCK %]
+
+		[% OTHER_CONDITIONS_BLOCK %]
+
+	</div>
+
+	[% CHILD_DISCOUNT_BLOCK %]
+
+	<div id="footer">
+		[% loc('POPUP_CONDICIONES_LABEL_DUDAS1') %]<span class="link1"><a href="http://www.lan.com/sitio_personas/contactenos/contact_center.html"> [% loc('POPUP_CONDICIONES_LINK_CONTACTCENTER') %]</a></span> [% loc('POPUP_CONDICIONES_LABEL_DUDAS2') %] <span class="link1"><a href="http://www.lan.com/sitio_personas/contactenos/oficinas.html">[% loc('POPUP_CONDICIONES_LINK_OFICINADEATENCION') %]</a></span>
+	</div>
+</div>

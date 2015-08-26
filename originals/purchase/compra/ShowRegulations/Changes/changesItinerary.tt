@@ -1,0 +1,51 @@
+<div id="outBound">
+	<span class="titleBlock">[% loc('POPUP_CONDICIONES_TEXTO_IDA') %]</span>
+	<table class="classTable">
+		<thead>
+			<tr>
+				<th>[% loc('POPUP_CONDICIONES_INFO_VUELOS') %]</th>
+				<th>[% loc('POPUP_CONDICIONES_INFO_CAMBIOSANTES') %]</th>
+				<th>[% loc('POPUP_CONDICIONES_INFO_CAMBIOSDESPUES') %]</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			[% FOREACH LEG_ITEM = OUTBOUND_LEGS %]
+				[% IF (loop.count() mod 2) == 0 %]
+					[% CLASS = '' %]
+				[% ELSE %]
+					[% CLASS = 'rowOdd' %]
+				[% END %]
+				[% INCLUDE	compra/ShowRegulations/Changes/changesLeg.tt
+							LEG = LEG_ITEM LEG_CLASS = CLASS %]
+			[% END %]
+
+		</tbody>
+	</table>
+</div>
+[% IF INBOUND_LEGS.size > 0 %]
+	<div id="inBound">
+		<span class="titleBlock">[% loc('POPUP_CONDICIONES_TEXTO_VUELTA') %]</span>
+		<table class="classTable">
+			<thead>
+				<th>[% loc('POPUP_CONDICIONES_INFO_VUELOS') %]</th>
+				<th>[% loc('POPUP_CONDICIONES_INFO_CAMBIOSANTES') %]</th>
+				<th>[% loc('POPUP_CONDICIONES_INFO_CAMBIOSDESPUES') %]</th>
+			</thead>
+			<tbody>
+
+				[% FOREACH LEG_ITEM = INBOUND_LEGS %]
+					[% IF (loop.count() mod 2) == 0 %]
+						[% CLASS = '' %]
+					[% ELSE %]
+						[% CLASS = 'rowOdd' %]
+					[% END %]
+					[% INCLUDE	compra/ShowRegulations/Changes/changesLeg.tt
+								LEG = LEG_ITEM LEG_CLASS = CLASS %]
+				[% END %]
+
+			</tbody>
+		</table>
+	</div>
+[% END %]
+

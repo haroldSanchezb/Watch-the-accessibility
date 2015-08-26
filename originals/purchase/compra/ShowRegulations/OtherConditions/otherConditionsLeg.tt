@@ -1,0 +1,48 @@
+<div class="rowOtherCondition">
+                <div class="headRowOtherCondition">
+                <span class="subTitleBlock">
+                        [% LEG.origin %] - [% LEG.destination %]
+                </span> 
+        </div>
+        <div class="cellOneRowOtherCondition">
+                <div>
+                        <span class="subTitleBlockSegment">
+                                [% loc('POPUP_CONDICIONES_TEXTO_ESTADIAMINIMA') %]
+                        </span>
+                        <br>
+                        <span class="otherConditionText">
+                                [% LEG.minStayText %]
+                        </span> 
+                </div>
+                <div>
+                        <span class="subTitleBlockSegment">
+                                [% loc('POPUP_CONDICIONES_TEXTO_STOPOVER') %]
+                        </span>
+                        <br>
+                        <span class="otherConditionText">
+                                [% LEG.stopOverText %]
+                        </span>
+                </div>
+        </div>
+	<div class="cellTwoRowOtherCondition">
+                <div>
+                        <span class="subTitleBlockSegment">
+                                [% loc('POPUP_CONDICIONES_TEXTO_ESTADIAMAXIMA') %]
+                        </span>
+                        <br>
+                        <span class="otherConditionText">
+                                [% LEG.maxStayText %]
+                        </span>
+                </div>
+                <br>
+                <div>
+                        <span class="subTitleBlockSegment">
+                                [% loc('POPUP_CONDICIONES_TEXTO_ANTICIPACIONCOMPRA') %]
+                        </span>
+                        <br>
+                        <span class="otherConditionText">
+                                [% LEG.minPurchaseAnticipationText %]
+                        </span>
+                </div>
+        </div>
+</div>

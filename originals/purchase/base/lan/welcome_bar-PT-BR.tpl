@@ -1,0 +1,1 @@
+<span class="txt-principal-destacado2">Boa vinda</span> {FIRST_NAME} 

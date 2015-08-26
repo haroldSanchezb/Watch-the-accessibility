@@ -1,0 +1,23 @@
+<div id="msg-op" class="warning-stop">
+	[% MSG = ERROR %]
+	[% MSG = MSG.replace('\n', '') %]
+	[% MSG = MSG.replace('\t', ' ') %]
+	[% MSG = MSG.replace('  ', ' ') %]
+	[% MSG = MSG.replace('\'', '"') %]
+
+	[% IF (matches = MSG.match('<div id="msg-op" class="[\w|-]+">(.*)<.div>') ) %]
+		[% matches.0 %]
+	[% ELSE %]
+		<p> [% ERROR %] </p>
+	[% END %]
+	<p>
+
+	</p>
+	[% IF CODE_DETAILS %]
+		[% FOREACH CODE_DETAIL IN CODE_DETAILS %]
+			<p>[% CODE_DETAIL %]</p>
+		[% END %]
+	[% END %]
+</div>
+
+

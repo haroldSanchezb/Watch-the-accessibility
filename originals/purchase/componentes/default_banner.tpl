@@ -1,0 +1,1 @@
+<script type="text/javascript">AC_FL_RunContent('movie','/files/banners/generico{WIDTH}?clickTag=//cgi-bin/log/go.cgi?loc=/cgi-bin/log/go.cgi?tap_id=15996','quality','high','wmode','transparent','width','{WIDTH}','height','{HEIGHT}')</script>

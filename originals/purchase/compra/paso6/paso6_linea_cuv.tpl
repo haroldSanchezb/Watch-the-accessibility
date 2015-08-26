@@ -1,0 +1,1 @@
+<p style="text-align: center;"><strong><a title="{_PALABRA_DESCARGAR_CUV}" href="{HOST}/cgi-bin/compra/genera_cuv.cgi?codigo_reserva={CODIGO_RESERVA}&amp;pasajero={PASAJERO}&amp;show=1">{_LABEL_DESCARGAR_CUV} {PASAJERO}</a></strong>  <img  HEIGHT = "25" WIDTH = "25" src="/images/common/iconos/icono_down_pdf.jpg" alt="{_PALABRA_DESCARGAR_CUV}"/> </p>

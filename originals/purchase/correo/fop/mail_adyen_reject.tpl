@@ -1,0 +1,3 @@
+{ID_PAGO}
+{MONTO}
+{MONEDA}

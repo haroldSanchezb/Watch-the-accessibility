@@ -1,0 +1,7 @@
+{_TXT_TBM}:
+
+{_LABEL_DIRECCION_SIN_ACENTO}:          {ADDRESS}
+{_LABEL_CIUDAD}:             {CITY}
+{_LABEL_ESTADO_PROVINCIA}: {STATE}
+{_TXT_CODIGO_POSTAL}:      {ZIP}
+{_TXT_PAIS}:               {COUNTRY}

@@ -1,0 +1,1 @@
+<a href='paso2.cgi?{PARAMETROS_PASO2_AYER}' class="sinlinea"><img src='/images/espanol/botones/bullet_ant.gif' border='0' alt='{_LABEL_DIA_ANTERIOR}'>&nbsp;<span class="txt-arial-11-azul">{_LABEL_DIA_ANTERIOR}</span></a>&nbsp;

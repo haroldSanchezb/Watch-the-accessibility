@@ -1,0 +1,1 @@
+<td style="padding: 0 8px 0 8px;"><a href="javascript:MM_openBrWindow('/reservas/compra/pop_info_sobrecargos.html','nombre','width=600,height=250,scrollbars=no, resizable=no');">{TOTAL_SOBRECARGO}</a></td>

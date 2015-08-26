@@ -1,0 +1,129 @@
+<script type="text/javascript" src="/js/external/jquery/1.10.2/jquery.js"></script>
+
+<script type="text/javascript">
+
+jQuery.noConflict();
+
+(function($) {
+    $(function() {
+		var idNoCCReason = '[% ID_NO_CC_FEE_REASON %]';
+		var radioSelectedValue = '[% VALUE_RADIO_SELECTED %]';
+
+		if(radioSelectedValue === "1") {
+			$("#isCCFeeDeactivatedYes").prop("checked", true);
+			$("#isCCFeeDeactivatedNo").prop("checked", false);
+			$("#idNoCCFeeReason").val(idNoCCReason);
+			$("#idNoCCFeeReason").show();
+			hideCCFeeData($);
+		}
+		else {
+			$("#isCCFeeDeactivatedNo").prop("checked", true);
+			$("#isCCFeeDeactivatedYes").prop("checked", false);
+			$("#idNoCCFeeReason").hide();
+			showCCFeeData($);
+		}
+
+        $("#showFeeDeactivate").click(function(e) { 
+			e.preventDefault();
+            showLightboxFee($);
+        });
+
+		$('input[name=isCCFeeDeactivated]').click(function() {
+			if($(this).val() === "1") {
+				$("#idNoCCFeeReason").show();
+			}
+			else {
+				$("#idNoCCFeeReason").hide();
+			}
+		});
+
+		$("#buttonFeeDeactivate").click(function(e) {
+			e.preventDefault();
+			hideLightboxFee($);
+			$('#tabla_cambio_moneda').hide();
+
+			var selectedRadio = $("#isCCFeeDeactivatedYes").prop('checked');
+			if(selectedRadio) {
+				hideCCFeeData($);
+			}
+			else {
+				showCCFeeData($);
+			}	
+
+		});
+
+		$("#closeFeeDeactivate").click(function(e) {
+			e.preventDefault();
+			hideLightboxFee($);
+		});
+		
+		if ($("#exoneracion").val() != 1) {
+			$(".noFee").css("visibility", "hidden");
+			console.log("estoy aca");
+		}
+
+    });
+
+
+})(jQuery);
+
+function showCCFeeData($) {
+	$("#qa_tabla_tarifa").show();
+	$("#qa_tabla_tarifa_sin_cc").hide();
+	$("#CCFee").show();
+	$("#NoCCFee").hide();	
+}
+
+function hideCCFeeData($) {
+	$("#qa_tabla_tarifa_sin_cc").show();
+	$("#qa_tabla_tarifa").hide();
+	$("#CCFee").hide();
+	$("#NoCCFee").show();
+}
+
+function showLightboxFee($) {
+	$("#desactiva_fee").show();
+	$("#fade_fee").show();
+}
+
+function hideLightboxFee($) {
+	$("#desactiva_fee").hide();
+	$("#fade_fee").hide();
+}
+
+</script>
+<input type="hidden" name="exoneracion" id="exoneracion" value='[% CC_FEE_EXONERACION %]'>
+<div class="noFee">
+  	<a id="showFeeDeactivate" href="#" rel="mx" class="modal">[% loc('FRASE_DESACTIVAR_SFEE') %]</a>
+</div>
+
+<div id="desactiva_fee" class="overbox_fee">
+<div class="modalWrap">
+	<a  id="closeFeeDeactivate" class="modalClose" href="#" title="[% loc('LABEL_CERRAR') %]" rel="mx"></a>
+	<div id="contenido_modal">
+		<h1>[% loc('TITULO_DESACTIVAR_SFEE') %]</h1>
+	    <p>[% loc('FRASE_MOTIVOS_EXCEPCION_SFEE') %]</p>
+	    <ul class="form">
+	        <li>
+	          <label>
+	            <input name="isCCFeeDeactivated" id="isCCFeeDeactivatedNo" value="[% CC_FEE_VALUE %]"  type="radio" />[% loc('LABEL_APLICA_SERVICE_FEE') %]
+	          </label>
+	          <label>
+	            <input name="isCCFeeDeactivated" id="isCCFeeDeactivatedYes" value="[% NO_CC_FEE_VALUE %]" type="radio" />[% loc('LABEL_NO_APLICAN_SERVICE_FEE') %]
+	          </label>
+	        </li>
+	        <li style="height:100px;">
+				<select name="idNoCCFeeReason" id="idNoCCFeeReason">
+				[% FOREACH reason IN CC_FEE_EXCEPTION_REASONS %]
+					<option value="[% reason.id_fee_motivo_excepcion %]" >[% reason.motivo_excepcion%]</option>
+				[% END %]
+				</select>
+			</li>
+			<li>
+				<button id="buttonFeeDeactivate" class="blue">[% loc('LABEL_APLICAR_CAMBIOS') %]</button>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+<div id='fade_fee' class="fadebox_fee">&nbsp;</div>

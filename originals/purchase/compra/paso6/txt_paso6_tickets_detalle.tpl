@@ -1,0 +1,2 @@
+{PASAJERO}			{SEGMENTO}			{TICKET}
+

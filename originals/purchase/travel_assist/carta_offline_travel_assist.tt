@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>LAN.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://[% HOST %].lan.com/css/base_2k8.css" type="text/css" title="LAN.com">
+<link rel="stylesheet" href="http://[% HOST %].lan.com/css/base_2k8_es.css" type="text/css" title="LAN.com">
+<link rel="stylesheet" href="http://[% HOST %].lan.com/css/legacy_base.css" type="text/css" title="LAN.com">
+<link rel="stylesheet" href="http://[% HOST %].lan.com/css/cajero.css" type="text/css" title="LAN.com">
+
+</head>
+
+<body style="background:#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="background:#415884; height:90px; text-align:left;"><a href="http://www.lan.com" target="_blank"><img src="/images/mail/operacional/bg_logo_lan.gif" alt="LAN.com" width="260" height="82" border="0" style="margin: 8px 0 0 15px;"></a></td>
+  </tr>
+  <tr>
+    <td style="height:5px;"></td>
+  </tr>
+  <tr>
+    <td style="height: 31px; background: #d0e5f6; text-align: left; font: bold 15px Arial, Helvetica, sans-serif; color: #415884; padding: 5px;">[% loc('TITULO_MAIL_PAGO_OFFLINE') %]</td>
+  </tr>
+  <tr>
+    <td style="font: normal 12px Arial, Helvetica, sans-serif; color: #333; padding: 20px 8px 15px 8px; text-align:left;"><p><strong>[% loc('ESTIMADO') %] [% NOMBRE %]</strong>&#44;<br>
+            <br>
+            [% loc('MSG_MAIL_COMPRA_OFFLINE') %]
+         </p> </td>
+  </tr>
+  <tr>
+  	<td style="padding: 0px 0 10px 0;">
+
+	<h2>[% loc('LABEL_ITINERARIO') %]</h2>
+	<table cellspacing="0" width="100%" class="table_process">
+	<tbody><tr>
+		
+		<th>[% loc('LABEL_ORIGEN') %]</th>
+		<th>[% loc('LABEL_DESTINO') %]</th>
+		<th>[% loc('LABEL_IDA') %]</th>
+		<th>[% loc('LABEL_REGRESO') %]</th>
+		<th>[% loc('LABEL_PASAJEROS') %]</th>
+		<th>[% loc('LABEL_DIAS') %]</th>
+	</tr>
+	<tr>
+		<td>[% loc('CITY_' _ CITY_ORIGIN) %]</td>
+		<td>[% loc('CITY_' _ CITY_DESTINO) %]</td>
+		<td>[% FECHA_IDA %]</td>
+		<td>[% FECHA_VUELTA %]</td>
+		<td>
+			[% IF NUM_ADULTS > 0 %] 
+				[% NUM_ADULTS %] [% NUM_ADULTS > 1 ? loc('LABEL_ADULTOS') : loc('LABEL_ADULTO') %]
+			[% END %]
+			[% IF NUM_CHILDREN > 0 %] 
+				[% NUM_CHILDREN %] [% NUM_CHILDREN > 1 ? loc('LABEL_NINOS') : loc('LABEL_NINO') %]
+			[% END %]
+		</td>
+		<td>[% NUMBER_OF_DAYS %]</td>
+	</tr>
+	
+	</tbody></table>
+
+	</td>
+  </tr>
+  <tr>
+  <td style="padding: 0px 0 10px 0;">
+
+<h4>[% loc('TITULO_TARIFA_ASISTENCIA_TABLA') %] [% loc('IMG_ASISTENCIA_VIAJE') %] </h4>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table">
+	<tbody>
+		<tr>
+			<th>[% loc('LABEL_ASISTENCIA_NOMBRE_PRODUCTO') %]</td>
+			<th>[% loc('LABEL_ASISTENCIA_TIPO_PLAN') %]</td>
+			<th>[% loc('LABEL_ASISTENCIA_INTEGRANTES') %]</td>
+			<th>[% loc('LABEL_MONTO_TOTAL') %]</td>
+		</tr>
+		<tr>
+			<td>
+			[% loc(PRODUCT_NAME) %]
+			</td>
+			<td>[% loc(PLAN) %]</td>
+			<td>
+				[% IF NUM_ADULTS > 0 %] 
+					[% NUM_ADULTS %] [% NUM_ADULTS > 1 ? loc('LABEL_ADULTOS') : loc('LABEL_ADULTO') %]
+				[% END %]
+				[% IF NUM_CHILDREN > 0 %] 
+					[% NUM_CHILDREN %] [% NUM_CHILDREN > 1 ? loc('LABEL_NINOS') : loc('LABEL_NINO') %]
+				[% END %]
+			</td>
+			<td>[% CURRENCY %][% MONTO %] </td>
+		</tr>
+	</tbody>
+</table>
+
+</tr>
+<tr>
+<td>
+[% INFORMACION_PAGO %]
+<br />
+  </td>
+  </tr>
+ <tr>
+ <td style="font: normal 12px Arial, Helvetica, sans-serif; color: #333; padding: 10px 8px 15px 8px; text-align:left;">[% loc('MSG_SALUDA_CORDIALMENTE') %]<br>
+          <strong>[% loc('LABEL_LAN_COM') %]</strong></td>
+ </tr>
+ 
+ <tr>
+ <td style="background:#415884; height:27px; font: normal 11px Arial, Helvetica, sans-serif; color: #fff; padding:7px 0 0 15px; text-align:left;">[% loc('COPYRIGHT_MAIL') %]</td>
+ </tr>
+ <tr>
+ <td style="font: normal 11px Arial, Helvetica, sans-serif; color: #666; padding:5px 0 5px 15px; text-align:left;">*[% loc('TXT_RECEPCION_MAIL') %]<br>
+            *[% loc('TXT_NO_RESPONDA') %]<br>
+            *[% loc('TXT_DIRECCION_MERCADO') %]
+ </td>
+ </tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

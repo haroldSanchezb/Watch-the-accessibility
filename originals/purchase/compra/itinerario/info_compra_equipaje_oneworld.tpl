@@ -1,0 +1,8 @@
+<div id="msg-op" class="legal-info">
+	<p>{_MSG_POLITICA_EQUIPAJE_CODESHARE_1}
+			{*BLOQUE_EQUIPAJE}
+			{LINK_EQUIPAJE}
+			{_MSG_POLITICA_EQUIPAJE_CODESHARE_2}
+			{/BLOQUE_EQUIPAJE}
+	</p>
+</div>

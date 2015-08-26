@@ -1,0 +1,1 @@
+{_MSG_CONF_COMPRA}

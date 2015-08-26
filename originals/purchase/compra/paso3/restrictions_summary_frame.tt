@@ -1,0 +1,72 @@
+<link rel="stylesheet" type="text/css" href="/css/restrictionsSummaryFrame.css">
+
+<div class="restrictionsSummaryFrame">
+	<div>
+		<div class="titleRestrictionsSummaryFrame">
+			<span>
+				[% loc('COMPRA_PASO3_LABEL_CONDICIONES') %]
+			</span>
+		</div>
+		[% IF ERROR_SUMMARY_FRAME > 0 %]
+			<div class="errorTextSummaryFrame">[% loc('COMPRA_PASO3_TEXTO_ERROR') %]</div>
+		[% ELSE %]
+			<div class="infoRestrictionsSummaryFrame">
+				<span class="subtitleRestrictionsSummaryFrame">
+					<p>[% loc('COMPRA_PASO3_TEXTO_CAMBIOS') %]</p>
+				</span>
+				<span class="textRestrictionsSummaryFrame">
+				[% SWITCH SUMMARY_REGULATIONS_CHANGE.codeResult %]
+					[% CASE 0 %]
+						[% loc('COMPRA_PASO3_CAMBIOS_OPCION_3') %]
+					[% CASE 1 %]
+						[% IF SUMMARY_REGULATIONS_CHANGE.codeResultTax > 0 %]
+							[% loc('COMPRA_PASO3_CAMBIOS_OPCION_7') %]
+						[% ELSE %]
+							[% loc('COMPRA_PASO3_CAMBIOS_OPCION_6') %]
+						[% END %]
+					[% CASE 2 %]
+						[% IF SUMMARY_REGULATIONS_CHANGE.codeResultTax > 0 %]
+							[% loc('COMPRA_PASO3_CAMBIOS_OPCION_4') %]
+						[% ELSE %]
+							[% loc('COMPRA_PASO3_CAMBIOS_OPCION_1') %]
+						[% END %]
+					[% CASE 3 %]
+						[% IF SUMMARY_REGULATIONS_CHANGE.codeResultTax > 0 %]
+							[% loc('COMPRA_PASO3_CAMBIOS_OPCION_5') %]
+						[% ELSE %]
+							[% loc('COMPRA_PASO3_CAMBIOS_OPCION_2') %]
+						[% END %]
+				[% END %]
+				</span>
+			</div>
+			<div>
+				<span class="subtitleRestrictionsSummaryFrame">
+					<p>[% loc('COMPRA_PASO3_TEXTO_DEVOLUCIONES') %]</p>
+				</span>
+				<span class="textRestrictionsSummaryFrame">
+				[% SWITCH SUMMARY_REGULATIONS_REFUND.codeResult %]
+					[% CASE 1 %]
+						[% IF SUMMARY_REGULATIONS_REFUND.amountFlag > 0 %]
+							[% loc('COMPRA_PASO3_DEVOLUCION_OPCION_3') %]
+						[% ELSE %]
+							[% loc('COMPRA_PASO3_DEVOLUCION_OPCION_4') %]
+						[% END %]
+					[% CASE 2 %]
+						[% IF SUMMARY_REGULATIONS_REFUND.amountFlag > 0 %]
+							[% loc('COMPRA_PASO3_DEVOLUCION_OPCION_2') %]
+						[% ELSE %]
+							[% loc('COMPRA_PASO3_DEVOLUCION_OPCION_1') %]
+						[% END %]
+					[% CASE 0 %]
+						[% loc('COMPRA_PASO3_DEVOLUCION_OPCION_5') %]
+				[% END %]
+				</span>
+			</div>
+		[% END %]
+	</div>
+	<div class="bottomRestrictionsSummaryFrame">
+		<a title="[% loc('COMPRA_PASO3_BOTON_DETALLECONDICIONES') %]" href="javascript:MM_openBrWindow('/cgi-bin/compra/regulations.cgi?session_id={SESSION_ID}','nombre',',width=1000,height=520,scrollbars=yes');">
+			[% loc('COMPRA_PASO3_BOTON_DETALLECONDICIONES') %]
+		</a>
+	</div>
+</div>

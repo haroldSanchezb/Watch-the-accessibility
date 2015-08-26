@@ -1,0 +1,17 @@
+<div class="otherCondition">
+			<div class="header1">
+				<span class="containerText1">
+					[% loc('POPUP_CONDICIONES_LABEL_OTRASCONDICIONES') %]
+				</span>
+			</div>
+			<div class="subContainer">
+				[% IF otherConditionsError == 0 %]
+					[% INCLUDE compra/ShowRegulations/OtherConditions/otherConditionsItinerary.tt
+							OUTBOUND_LEGS = OUTBOUND
+							INBOUND_LEGS = INBOUND %]
+				[% ELSE %]
+					[% INCLUDE compra/ShowRegulations/error.tt
+								sectionOtherCondition = 1 %]
+				[% END %]
+			</div>
+		</div>

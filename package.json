@@ -1,0 +1,13 @@
+{
+  "name": "lantesting",
+  "version": "1.0.0",
+  "description": "check accessibility rules in templates",
+  "author": "Harold Sanchez Balaguera",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^1.2.1",
+    "gulp-accessibility": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.4.2"
+  }
+}
