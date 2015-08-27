@@ -1,1 +1,0 @@
-{_TXT_MAXIMO_PIEZAS}

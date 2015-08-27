@@ -1,2 +1,0 @@
-
-<!-- no hay layer predeterminado -->

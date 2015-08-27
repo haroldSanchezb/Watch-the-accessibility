@@ -1,1 +1,0 @@
-<p>{EMPRESA} - {SUCURSAL} - {USUARIO}</p>

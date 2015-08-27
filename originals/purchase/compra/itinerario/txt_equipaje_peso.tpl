@@ -1,1 +1,0 @@
-{_TXT_PESO_MAXIMO} {LIMITE} 

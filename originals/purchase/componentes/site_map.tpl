@@ -1,3 +1,0 @@
-<ul>
-{SECCIONES}
-</ul>

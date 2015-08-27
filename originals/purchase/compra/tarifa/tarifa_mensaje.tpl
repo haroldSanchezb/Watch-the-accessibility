@@ -1,7 +1,0 @@
-<h4>{_LABEL_NOTAS_A_LA_TARIFA}</h4>
-<ul class=list>
-	{_MSG_COBRO_DIFERENTE}
-	{LINEAS_TARIFA_MENSAJE}
-	<li>{_LABEL_DESC_RESTRICCIONES}</li>
-</ul>
-<br>

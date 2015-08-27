@@ -1,1 +1,0 @@
-{_MSG_CONF_RESERVA}

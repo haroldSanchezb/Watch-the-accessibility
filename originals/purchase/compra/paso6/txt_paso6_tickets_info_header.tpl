@@ -1,2 +1,0 @@
-{NUMLINEA}.- Tickets
-{DETALLE_TICKETS}

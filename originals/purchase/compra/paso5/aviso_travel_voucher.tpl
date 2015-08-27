@@ -1,1 +1,0 @@
-<h6>{MSG_TRAVEL_VOUCHER}</h6>

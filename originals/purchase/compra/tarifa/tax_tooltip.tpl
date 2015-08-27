@@ -1,1 +1,0 @@
-<span onMouseOut="if (typeof(desactiva_ttip) != 'undefined') desactiva_ttip();" onMouseOver="if (typeof(activa_ttip) != 'undefined') activa_ttip('contenido_zk', 'tooltip_flight_info');" style="font-weight:bold;text-decoration:underline;color:#0267C3">{TAX_CODE}</span>

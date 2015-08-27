@@ -1,1 +1,0 @@
-<a href="javascript:MM_openBrWindow('/cgi-bin/compra/show_escalas.cgi?session_id={SESSION_ID}&amp;id_segmento={ID_SEGMENTO}&amp;id_vuelo={ID_VUELO}&amp;id_detalle={ID_DETALLE}','nombre','width=600,height=520,scrollbars=yes');">{_LABEL_ESCALAS} {NUMESCALAS}</a>

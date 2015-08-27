@@ -1,1 +1,0 @@
-<a href="/cgi-bin/logout.cgi?page={+CURRENT_PAGE_URLENCODED}">Terminar sess&atilde;o</a>

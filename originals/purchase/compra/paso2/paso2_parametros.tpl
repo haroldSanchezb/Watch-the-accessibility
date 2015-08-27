@@ -1,1 +1,0 @@
-sitio={SITIO}&amp;session_id={SESSION_ID}&amp;cabina={CABINA}&amp;nadults={NADULTS}&amp;nchildren={NCHILDREN}&amp;ninfants={NINFANTS}&amp;from_city1={FROM_CITY1}&amp;to_city1={TO_CITY1}&amp;fecha1={FECHA1}{EXTRA_PARAMETROS}

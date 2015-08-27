@@ -1,1 +1,0 @@
-<p>{MENSAJE_STATUS}</p>

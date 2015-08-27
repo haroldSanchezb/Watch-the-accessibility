@@ -1,1 +1,0 @@
-{+TEMPLATE('/sitio_personas/layout/header.tpl')}

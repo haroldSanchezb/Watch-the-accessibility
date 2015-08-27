@@ -1,1 +1,0 @@
-<a href="javascript:MM_openBrWindow('/cgi-bin/compra/show_escalas.cgi?session_id={SESSION_ID}&amp;id_vuelo={ID_VUELO}&amp;numpaso={NUMPASO}','nombre','width=600,height=520,scrollbars=yes');" onMouseOver="return overlib('<p>{_LABEL_DESC_ESCALAS}</p>', WIDTH, 200, HAUTO, VAUTO);" onMouseOut="return nd();">{NUMESCALAS}</a>

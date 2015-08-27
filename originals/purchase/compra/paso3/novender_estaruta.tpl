@@ -1,1 +1,0 @@
-<p>{_MSG_ROUTING_NO_ASOCIADOS}</p>
