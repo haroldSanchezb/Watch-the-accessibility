@@ -8,6 +8,6 @@
     "del": "^1.2.1",
     "gulp-accessibility": "^1.2.1",
     "gulp-rename": "^1.2.2",
-    "gulp-shell": "^0.4.2"
+    "gulp-run": "^1.6.10"
   }
 }
