@@ -23,8 +23,7 @@ gulp.task('copy', function () {
 			fileContent = fs.readFileSync("./file.txt", "utf8"),
 			fileArray = fileContent.split("\n");
 	fileArray.forEach(function (element) {
-		if (element.search("modified:") !== -1 && // aqui se cambia a M 
-			(element.search(".tt")  !== -1 || element.search(".tpl")  !== -1) ) {
+		if (element.search(".tt")  !== -1 || element.search(".tpl")  !== -1) {
 			srcFiles.push((element.replace('modified:', '')).trim()); // aqui se cambia a M
 		}
 	});
