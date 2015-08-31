@@ -11,10 +11,10 @@ gulp.task('test', function() {
 });
 
 gulp.task('shell', function () {
-	return run('git status').exec()
-		.pipe(gulp.dest('./templates')) // aqui se pondria svn st
+	return run('git status').exec() // aqui se pondria svn st
+		.pipe(gulp.dest('./templates'))
 		.pipe(rename('file.txt'))
-    .pipe(gulp.dest('./'));
+		.pipe(gulp.dest('./'));
 });
 
 
