@@ -38,5 +38,5 @@ gulp.task('delete', function(cb) {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('./originals/**/*', ['copy', 'test']);
+	gulp.watch('./originals/**/*', ['shell','copy', 'test']);
 });
